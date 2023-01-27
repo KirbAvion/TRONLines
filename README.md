@@ -1,5 +1,5 @@
 # TRONLines
-Dynamic, expandable, minimally-invasive emissive textures for armor trims (23w04a).
+A dynamic, expandable, minimally-invasive emissive texture shader for armor trims (23w04a).
 
 Here's the basics: Each material's palette texture has been updated to include a ninth pixel that controls the emission color. If you don't want the material to glow, just set the last pixel to be purely transparent. For a standard emissive glow, set it to #FFFFFF. You can also set it to any other solid color to tint the emissive texture, but your results may vary.
 
@@ -8,3 +8,4 @@ The end result in the base pack is that amethyst, redstone, and emerald armor tr
 For the more technically inclined, here's how you make your textures compatible: Any palettes under assets/minecraft/textures/trims/color_palettes should be expanded to 9x1, with the far-rightmost pixel either fully transparent (for solid colors) or solid #FFFFFF (for emissive materials). The base trim_palette.png should also be expanded to 9x1 with the far-rightmost pixel solid #FFFFFF. Then, add a single white pixel to the top-leftmost corner of your armor trim textures under assets/minecraft/textures/trims/models/armor, which just tells the shader it should try to apply emissive textures to that overlay. (Technically you can also do this with, just, regular armor textures, if you want your leather tunic to glow in the dark. But *should* you?)
 
 This project started out hacking around with Ancientkingg's fancyPants shader. Turns out very little of that pack was actually applicable to the project at hand, and the few principles they do share have been hammered apart beyond recognition, but it nonetheless bears acknowledgement. Or perhaps blame, should this effort prove misguided. https://github.com/Ancientkingg/fancyPants
+
