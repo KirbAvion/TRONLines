@@ -1,5 +1,5 @@
 # TRONLines
-Dynamic emissive textures for armor trims (23w04a)
+Dynamic emissive textures for armor trims (23w04a).
 
 Here's the basics: Each material's palette texture has been updated to include a ninth pixel that controls the emission color. If you don't want the material to glow, just set the last pixel to be purely transparent. For a standard emissive glow, set it to #FFFFFF. You can also set it to any other solid color to tint the emissive texture, but your results may vary.
 
