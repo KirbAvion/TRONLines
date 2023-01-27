@@ -1,6 +1,9 @@
 # TRONLines
 A dynamic, expandable, minimally-invasive emissive texture shader for armor trims (23w04a).
 
+Sample images that I can't be bothered to embed:
+https://imgur.com/a/6C5DNtM
+
 Here's the basics: Each material's palette texture has been updated to include a ninth pixel that controls the emission color. If you don't want the material to glow, just set the last pixel to be purely transparent. For a standard emissive glow, set it to #FFFFFF. You can also set it to any other solid color to tint the emissive texture, but your results may vary.
 
 The end result in the base pack is that amethyst, redstone, and emerald armor trims glow in the dark, and everything else retains its standard shading. This can be tweaked to the user's preference by changing the aforementioned pixels in the aforementioned textures. It *should* be indefinitely expandable and compatible with trim materials and textures added by datapacks, as long as the textures are in the right format. Doesn't need mods or Optifine or Iris or *whatever* the kids are using these days to run, and it *probably* won't break if you install one of those anyway. Just a regular resource pack that runs off the built-in vanilla core shaders.
