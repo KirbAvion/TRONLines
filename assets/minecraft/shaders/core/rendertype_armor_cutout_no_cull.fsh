@@ -1,5 +1,7 @@
 // Some of this was bootlegged from Ancientkingg's FancyPants shader, but the parts that made it through are in pretty rough shape. https://github.com/Ancientkingg/fancyPants
 
+// Kirven was here. www.brennynsabar.us
+
 #version 150
 
 #moj_import <fog.glsl>
