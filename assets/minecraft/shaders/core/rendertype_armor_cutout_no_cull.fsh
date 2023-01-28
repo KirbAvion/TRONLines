@@ -38,9 +38,9 @@ vec4 color = texture(Sampler0, texCoord0) * vertexColor * ColorModulator;
 color = texture(Sampler0, texCoord0) * vertexColor * ColorModulator;
 			
 
-	for (int Xindex = 0; Xindex <= (sizeX); Xindex++)
+	for (int Xindex = 0; Xindex <= (totalSetX); Xindex++)
 	{
-        for (int Yindex = 0; Yindex <= (sizeY); Yindex++)
+        for (int Yindex = 0; Yindex <= (totalSetY); Yindex++)
         {
 
 			emissivePixel = texelFetch(Sampler0, ivec2(Xindex * 64, Yindex * 32), 0);
