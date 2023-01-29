@@ -29,7 +29,8 @@ void main() {
     }
 	
     if (color.a * 255 <= 254 && color.a * 255 >= 1) {
-        color = texture(Sampler0, texCoord0) * vec4(vertexColor.r + color.a, vertexColor.g + color.a, vertexColor.b + color.a, 1) * ColorModulator;
+	
+        color = texture(Sampler0, texCoord0) * vec4(min(vertexColor.r + color.a, 1), min(vertexColor.g + color.a, 1), min(vertexColor.b + color.a, 1), 1) * ColorModulator;
     }
 	
     fragColor = linear_fog(color, vertexDistance, FogStart, FogEnd, FogColor);
