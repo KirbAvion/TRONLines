@@ -1,19 +1,23 @@
 # TRONLines
-A dynamic, expandable, minimally-invasive, and only slightly *unstable* emissive texture shader for armor trims (23w04a).
+A dynamic, expandable, minimally-invasive emissive texture shader for armor trims (Minecraft 23w04a).
 
 Sample images that I can't be bothered to embed:
 https://imgur.com/a/6C5DNtM
 
-Here's the basics: Each material's palette texture has been updated to include a ninth pixel that controls the emission color. If you don't want the material to glow, just set the last pixel to be purely transparent. For a standard emissive glow, set it to #FFFFFF. You can also set it to any other solid color to tint the emissive texture, but your results may vary.
+Here's the basics: Setting a trim material palette's alpha below 255 makes it emissive. How *far* below 255 you set it determines how bright it gets; 254 being the highest and somewhere around 10 being the dimmest. I mean, technically, *1* would be the lowest, but if you can tell the difference... well, I understand *NORAD* is hiring.
 
-The end result in the base pack is that amethyst, redstone, and emerald armor trims glow in the dark, and everything else retains its standard shading. This can be tweaked to the user's preference by changing the aforementioned pixels in the aforementioned textures. It *should* be indefinitely expandable and compatible with trim materials and textures added by datapacks, as long as the textures are in the right format. Doesn't need mods or Optifine or Iris or *whatever* the kids are using these days to run, and it *probably* won't break if you install one of those anyway. Just a regular resource pack that runs off the built-in vanilla core shaders.
+The end result in the base pack is that amethyst, redstone, and emerald armor trims glow in the dark, and everything else retains its standard shading. This can be tweaked to the user's preference by changing the aforementioned textures. It *should* be indefinitely expandable and compatible with trim materials and textures added by datapacks, as long as the textures are in the right format. Doesn't need mods or Optifine or Iris or whatever the kids are using these days to run, and it *probably* won't break if you install one of those anyway. Just a regular resource pack that runs off the built-in vanilla core shaders.
 
-For the more technically inclined, here's how you make your textures compatible: Any palettes under assets/minecraft/textures/trims/color_palettes should be expanded to 9x1, with the far-rightmost pixel either fully transparent (for solid colors) or solid #FFFFFF (for emissive materials). The base trim_palette.png should also be expanded to 9x1 with the far-rightmost pixel solid #FFFFFF. Then, add a single white pixel to the top-leftmost corner of your armor trim textures under assets/minecraft/textures/trims/models/armor, which just tells the shader it should try to apply emissive textures to that overlay. (Technically you can also do this with, just, regular armor textures, if you want your leather tunic to glow in the dark. But *should* you?)
+The one caveat, of course, is that while armor trim textures don't support transparency, and thus render more or less the same regardless of the palette alpha, the *item* textures *do*. So if you set your emissive brightness *too* low, it'll start to affect the trim color on the item sprite. But hey, what can you do.
 
-This project started out hacking around with Ancientkingg's fancyPants shader. Turns out very little of that pack was actually applicable to the project at hand, and the few principles they do share have been hammered apart beyond recognition, but it nonetheless bears acknowledgement. Or perhaps blame, should this effort prove misguided. https://github.com/Ancientkingg/fancyPants
+Technically you can also do this with, just, regular armor textures, if you want your leather tunic to glow in the dark. But *should* you?
 
-There is one *very* small caveat, in that your GPU usage will spike tremendously if you stand too close to anyone wearing trimmed armor. Which, you know, is probably fine.
+This project started out hacking around with Ancientkingg's fancyPants shader, which worked pretty well until I almost crashed my game. Nonetheless, the original shader is worth checking out. https://github.com/Ancientkingg/fancyPants
+
+After the aforementioned incident, I switched to using a method I first saw in a pack by ShockMicro. I have no idea if it originated there, but again, it bears mention. https://github.com/ShockMicro/VanillaDynamicEmissives
+
+
 
 Should you decide for whatever reason that you'd like to include TRON Lines in your resource pack, I offer it available for use as-is with two stipulations:
-1) There's an attribution tag in the core shader file that I'd prefer stay in there. Attribution beyond that is largely unnecessary.
-2) As I arrived at the end product largely through trial and error, and barely understand its underlying principles myself, I cannot at this time offer any tech support in the event something goes horribly wrong. Which, again, it will, on account of the whole minor instability.
+1) There's an attribution tag in the core shader file that I'd prefer stay in there, mostly because it attributes the pack I stole the idea from.
+2) As I arrived at the end product largely through trial and error, and barely understand its underlying principles myself, I cannot at this time offer any tech support in the event something goes horribly wrong.
