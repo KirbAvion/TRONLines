@@ -1,5 +1,5 @@
 # TRONLines
-A dynamic, expandable, minimally-invasive emissive texture shader for armor trims (23w04a).
+A dynamic, expandable, minimally-invasive, and only slightly *unstable* emissive texture shader for armor trims (23w04a).
 
 Sample images that I can't be bothered to embed:
 https://imgur.com/a/6C5DNtM
@@ -12,7 +12,8 @@ For the more technically inclined, here's how you make your textures compatible:
 
 This project started out hacking around with Ancientkingg's fancyPants shader. Turns out very little of that pack was actually applicable to the project at hand, and the few principles they do share have been hammered apart beyond recognition, but it nonetheless bears acknowledgement. Or perhaps blame, should this effort prove misguided. https://github.com/Ancientkingg/fancyPants
 
+There is one *very* small caveat, in that your GPU usage will spike tremendously if you stand too close to anyone wearing trimmed armor. Which, you know, is probably fine.
 
 Should you decide for whatever reason that you'd like to include TRON Lines in your resource pack, I offer it available for use as-is with two stipulations:
 1) There's an attribution tag in the core shader file that I'd prefer stay in there. Attribution beyond that is largely unnecessary.
-2) As I arrived at the end product largely through trial and error, and barely understand its underlying principles myself, I cannot at this time offer any tech support in the event something goes horribly wrong.
+2) As I arrived at the end product largely through trial and error, and barely understand its underlying principles myself, I cannot at this time offer any tech support in the event something goes horribly wrong. Which, again, it will, on account of the whole minor instability.
