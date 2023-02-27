@@ -1,5 +1,5 @@
 # TRONLines
-A dynamic, expandable, minimally-invasive emissive texture shader for armor trims (Minecraft 23w04a).
+A dynamic, expandable, minimally-invasive emissive texture shader for armor trims (Minecraft 23w04a/1.19.4).
 
 Sample images that I can't be bothered to embed:
 https://imgur.com/a/6C5DNtM
